@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
+
+@mixin positions($number1, $number2) {
+   position: absolute;
+   left: $number1;
+   top: $number2;
+   transform: translate(-$number1,-$number2);
+}
+
+@mixin backgrounds {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: 'Lato', sans-serif;
+}
+
+.title {
+  height: 100vh;
+  width: 100%;
+  background-image: url(./images/bgs/hero-image.jpg);
+  @include backgrounds;
+}
+
+.second {
+  background: #ebebeb;
+  height: 100vh;
+  width: 100%;
+  header {
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    position: relative;
+    * {
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2.1vw;
+      @include positions(54%, 50%);
+    }
+    img {
+      opacity: .85;
+      height: 66%;
+      @include positions(40%, 50%);
+    }
+  }
+
+  .red {
+    height: 0.5%;
+    width: 5%;
+    background-color: #dd0000;
+    border-color: #dd0000;
+    margin-left: 10%;
+    display: inline-block;
+    border-top: none;
+  }
+
+  .greytop {
+    height: 0.5%;
+    width: 75%;
+    background-color: #9d9d9d;
+    border-color: #9d9d9d;
+    display: inline-block;
+    border-top: none;
+  }
+
+  .map {
+    height: 70%;
+    width: 70%;
+    background: black;
+    margin: 2% auto;
+    border: 0.5vh #9d9d9d solid;
+  }
+
+  .greybottom {
+    height: 0.5%;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #9d9d9d;
+    border-color: #9d9d9d;
+    border-top: none;
+  }
+
+  .greysmall {
+    height: 0.5%;
+    width: 5%;
+    margin-left: 10%;
+    background-color: #9d9d9d;
+    border-color: #9d9d9d;
+    border-top: none;
+  }
+}
+
+
+section.page {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 5;
+  @include backgrounds;
+
+  span {
+    height: 5vw;
+    width: 5vw;
+    cursor: pointer;
+    text-align: center;
+    img{
+      height: 100%;
+      filter: drop-shadow( 0 .5vw .5vw #000 );
+    }
+  }
+
+  .ac1 {
+    @include positions(22%, 2.5%);
+  }
+
+  .ac2 {
+    @include positions(30%, 2.5%);
+  }
+
+  .ac3 {
+    @include positions(38%, 2.5%);
+  }
+
+  .ac4 {
+    @include positions(46%, 2.5%);
+  }
+
+  .acr {
+    @include positions(54%, 2.5%);
+  }
+
+  .acu {
+    @include positions(62%, 2.5%);
+  }
+
+  .acs {
+    @include positions(70%, 2.5%);
+  }
+
+  .aco {
+    @include positions(78%, 2.5%);
+  }
+
+  .title-area {
+    width: 30%;
+    @include positions(50%, 17%);
+    color: white;
+    img {
+      width: 100%;
+    }
+    p{
+      font-size: 2vw;
+      @include positions(50%, 50%);
+    }
+  }
+
+  .character {
+    width: 30%;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .views {
+    color: white;
+    font-size: 1.25vw;
+    height: 10%;
+    width: 30%;
+    @include positions(50%, 95%);
+    p {
+      height: 75%;
+      align-items: center;
+      display: inline-flex;
+      cursor: pointer;
+      text-shadow: 0 0.25vw 0.5vw black;
+    }
+    #one{
+      @include positions(0, 50%);
+    }
+    #two{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .baseline {
+    height: 0.5%;
+    width: 30%;
+    background-color: rgba(255,255,255, 0.5);
+    border-color: rgba(255,255,255, 0.5);
+    display: inline-block;
+    @include positions(50%, 95%);
+  }
+
+  .selectline {
+    transition: left 0.33s;
+    height: 0.5%;
+    width: 15%;
+    background-color: white;
+    border-color: white;
+    display: inline-block;
+    @include positions(41%, 95%);
+  }
+}
+
+.picture {
+  width: 10vw;
+  text-align: center;
+}
+
+.info {
+  font-size: 1vw;
+  text-align: center;
+}
