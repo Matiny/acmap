@@ -209,7 +209,7 @@ class Main extends Component {
             <MyMapComponent
               mapchoice={mapselection}
               pickGameFunc={this.pickGame}
-              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxLYsJIPa4MG7dYmUt7-MTjxjxOuoXH1E&callback=initMap"
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={<div style={{ height: `100%` }} />}
               mapElement={<div style={{ height: `100%` }} />}
